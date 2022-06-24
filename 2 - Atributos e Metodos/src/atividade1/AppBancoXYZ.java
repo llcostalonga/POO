@@ -1,6 +1,6 @@
 package atividade1;
 
-public class AppBancoNoveDedos {
+public class AppBancoXYZ {
 	
 
 	public static void main(String[] args) {
