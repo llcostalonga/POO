@@ -4,9 +4,7 @@ public class Gladiador extends Lutador {
 	ArrayList<Armadura> armaduras; 
 	ArrayList<Arma> armas;
 	
-    
-
-	
+    	
 	public Gladiador() {				
 		super("Gladiador sem nome " +sequencialNome++);
 		armaduras = new ArrayList<>();
@@ -76,6 +74,8 @@ public class Gladiador extends Lutador {
 			double intensidadeAtaque = armadura.poderDefesa * poderAtaque;
 			
 			this.nivelEnergia = nivelEnergia - intensidadeAtaque;
+			
+			//armadura.estadoConsevacao--;
 			
 		}
 		

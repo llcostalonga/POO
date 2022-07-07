@@ -50,6 +50,14 @@ public class AppArena {
 						
 		}
 		Personagem vencedor= p1.estaVivo()?p1:p2;
+	
+		if ((p1 instanceof Gladiador)&&(p2 instanceof Gladiador)) { 
+				Personagem perdedor= p1.estaVivo()?p2:p1;
+				((Gladiador)vencedor).addArma(((Gladiador)perdedor).armas);
+				((Gladiador)vencedor).addArmadura(((Gladiador)perdedor).armaduras);
+			System.out.println("arsenal transferido");
+		}
+		
 		
 		System.out.println("Combate encerrado! Vencedor:" + vencedor);
 	}
