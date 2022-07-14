@@ -8,12 +8,19 @@ public class Fera extends Personagem {
 		this.nivelEnergia = 100;
 	}
 
+	
 	public Fera() {
 		this("Fera sem nome " +sequencialNome++);
 		this.nivelEnergia = Math.random() * 200;
 	}
 	
 	
+	
+	public Fera(String string, double nivelEnergia) {
+		super(string, nivelEnergia);
+	}
+
+
 	public boolean estaVivo() {
 		if (super.nivelEnergia <= 0) return false;
 

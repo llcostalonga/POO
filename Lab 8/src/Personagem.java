@@ -11,6 +11,11 @@ public abstract class Personagem {
 		this.nome = nome;
 	}
 	
+	public Personagem(String nome, double nivelEnergia) {
+		this.nome = nome;
+		this.nivelEnergia = nivelEnergia;
+	}
+	
 	public String toString() {
 		return  this.nome + "[" + nivelEnergia +"]";
 	}
