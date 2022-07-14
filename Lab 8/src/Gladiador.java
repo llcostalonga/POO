@@ -46,25 +46,24 @@ public class Gladiador extends Lutador {
 	private void usarArma(Personagem personagem) {
 		if(armas.size() > 0) {
 			int tipoArma = (int) (Math.random() * armas.size());
-
 			Arma arma= armas.get(tipoArma);
-
+									
 			if(Math.random() >0.5) {			
 				personagem.defender(arma.pegarGolpeRandomico().poderOfensivo);
 			}else {
 			Golpe golpeMortal;	
 			
 				if(Math.random() >0.5) {			
-					golpeMortal = ((ArmaEfeitoMoral)arma).
+					golpeMortal = arma.explodir();
 				}else {
-					personagem.defender(arma.atirar());
+					golpeMortal = arma.atirar();
 				}
 				
-				personagem.defender
+				personagem.defender(golpeMortal.poderOfensivo);
 			}
 		}
-
-	
+		
+	}
 
 	@Override
 	public void defender(double poderAtaque) {
@@ -98,39 +97,25 @@ public class Gladiador extends Lutador {
 
 }
 
-
- class Arma{
-	String descricao;
-	ArrayList<Golpe> golpes;
-	public Arma(String descricao) {	
-		this.descricao = descricao;
-		this.golpes = new ArrayList();
-	}
-	
-	public void addGolpe(String nomeGolpe, double poderOfensivo) {
-		golpes.add(new Golpe(nomeGolpe,  poderOfensivo));
-	}
-	
-	public Golpe pegarGolpeRandomico() {
-		if(golpes.size() > 0) {
-			int tipoGolpe = (int) (Math.random() * golpes.size());
-			return golpes.get(tipoGolpe);						
-		}
-		return null;
-	}
-	
-	
-}
-
- class Golpe{
-	String nomeGolpe; 
-	double poderOfensivo;
-	Golpe(String nomeGolpe, double poderOfensivo){
-		this.nomeGolpe = nomeGolpe;
-		this.poderOfensivo = poderOfensivo;
-	}
-}
-
+//Foi para arquivo próprio tonando-se pública;
+/*
+ * class Arma{ String descricao; ArrayList<Golpe> golpes; public Arma(String
+ * descricao) { this.descricao = descricao; this.golpes = new ArrayList(); }
+ * 
+ * public void addGolpe(String nomeGolpe, double poderOfensivo) { golpes.add(new
+ * Golpe(nomeGolpe, poderOfensivo)); }
+ * 
+ * public Golpe pegarGolpeRandomico() { if(golpes.size() > 0) { int tipoGolpe =
+ * (int) (Math.random() * golpes.size()); return golpes.get(tipoGolpe); } return
+ * null; }
+ * 
+ * 
+ * }
+ * 
+ * class Golpe{ String nomeGolpe; double poderOfensivo; Golpe(String nomeGolpe,
+ * double poderOfensivo){ this.nomeGolpe = nomeGolpe; this.poderOfensivo =
+ * poderOfensivo; } }
+ */
 class Armadura{
 	String descricao;
 	double poderDefesa;
