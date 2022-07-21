@@ -1,0 +1,8 @@
+﻿tipoPersonagem;nomePersonagem;nivelEnergia;descricaoArma;descicaoGolpe;poderOfensivoGolpe;descricaoArmadura;poderDefesaArmadura;estadoConservacaoArmadura
+Fera;Leão;150;;;;;;
+Lutador;Mike Tyson;100;;;;;;
+Gladiador;Spiculus;80;espada;golpe rodado;150;;;
+Gladiador;Spiculus;80;lança;arremesso;100;;;
+Gladiador;Spiculus;80;lança;perfurar;50;;;
+Gladiador;Spiculus;80;;;;Corpo de Bronze;50;100
+Gladiador;Spiculus;80;;;;Escudo de Mão;20;100

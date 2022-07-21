@@ -46,25 +46,11 @@ public class Gladiador extends Lutador {
 	private void usarArma(Personagem personagem) {
 		if(armas.size() > 0) {
 			int tipoArma = (int) (Math.random() * armas.size());
-
 			Arma arma= armas.get(tipoArma);
-
-			if(Math.random() >0.5) {			
-				personagem.defender(arma.pegarGolpeRandomico().poderOfensivo);
-			}else {
-			Golpe golpeMortal;	
-			
-				if(Math.random() >0.5) {			
-					golpeMortal = ((ArmaEfeitoMoral)arma).
-				}else {
-					personagem.defender(arma.atirar());
-				}
-				
-				personagem.defender
-			}
+			personagem.defender(arma.pegarGolpeRandomico().poderOfensivo);			
 		}
-
-	
+		
+	}
 
 	@Override
 	public void defender(double poderAtaque) {

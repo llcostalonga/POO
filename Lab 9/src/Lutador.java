@@ -3,6 +3,12 @@ public class Lutador extends Personagem implements ArteMarcial{
 
  
 	
+	//implementação para resolução do lab 8
+	public Lutador(String nome, double nivelEnergia) {
+		super(nome, nivelEnergia);
+		// TODO Auto-generated constructor stub
+	}
+
 	public Lutador(String nome) {
 		super(nome);
 		this.nivelEnergia = 100;

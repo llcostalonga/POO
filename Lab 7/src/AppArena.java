@@ -92,8 +92,7 @@ public class AppArena {
 				realizarCombate(p1,p2);				
 			}
 			
-		
-			
+					
 			//index = index==personagens.length?0:index+1;
 			
 		}

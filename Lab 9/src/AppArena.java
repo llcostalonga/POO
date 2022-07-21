@@ -42,10 +42,52 @@ public class AppArena {
 					Personagem fera = new Fera(data[1], Double.valueOf(data[2]).doubleValue());
 					personagens.add(fera);
 				}else {
+					if(data[0].equalsIgnoreCase("Gladiador")) {
+						Gladiador gladiador = new Gladiador(data[1], Double.valueOf(data[2]).doubleValue());
+												
+						//Verifica se já existe o gladiador (necessário implementar equals em Personagem)
+						int index = personagens.indexOf(gladiador);
+						if(index == -1) {
+							personagens.add(gladiador);
+						}else {
+							gladiador = (Gladiador)personagens.get(index);
+						}
+						
+						//cadastro de armas
+						if(data.length == 6) {
+							String descicaoArma = data[3];
+							String nomeGolpe = data[4];
+							double poderOfensivo = Double.valueOf(data[5]).doubleValue();
+													
+							//Verifica se arma já foi criada					
+							Arma arma = gladiador.getArma(descicaoArma);
+							if(arma == null) arma = new Arma(descicaoArma);
+							
+							arma.addGolpe(nomeGolpe, poderOfensivo);	
+							gladiador.addArma(arma);
+							
+						}
+						
+						//cadastro de armaduras
+						if(data.length == 9) {
+							String descicaoArmadura = data[6];
+							double poderDefensivo = Double.valueOf(data[7]).doubleValue();
+							double estadoConservacao = Double.valueOf(data[8]).doubleValue();
+																									
+							Armadura armadura = new Armadura(descicaoArmadura,poderDefensivo,estadoConservacao);
+							gladiador.addArmadura(armadura);
+							
+						}
 
-						//continue o código.
-						//Não esqueça de rever todos os construtores.
+					}else {
+						if(data[0].equalsIgnoreCase("Lutador")) {
+							Personagem lutador = new Lutador(data[1], Double.valueOf(data[2]).doubleValue());
+							personagens.add(lutador);
+						}
+						
 					}
+				}
+				
 				
 			}
 			this.personagens = new Personagem[personagens.size()];
@@ -95,8 +137,8 @@ public class AppArena {
 	
 		if ((p1 instanceof Gladiador)&&(p2 instanceof Gladiador)) { 
 				Personagem perdedor= p1.estaVivo()?p2:p1;
-				((Gladiador)vencedor).addArma(((Gladiador)perdedor).armas);
-				((Gladiador)vencedor).addArmadura(((Gladiador)perdedor).armaduras);
+				((Gladiador)vencedor).addArmas(((Gladiador)perdedor).armas);
+				((Gladiador)vencedor).addArmaduras(((Gladiador)perdedor).armaduras);
 			System.out.println("arsenal transferido");
 		}
 		
@@ -148,7 +190,7 @@ public class AppArena {
 		String filePath;
 		
 		//filePath = "./src/main/java/arquivoArena.csv";
-		filePath = "./src/arquivoArena.csv";
+		filePath = "./res/arquivoArena.csv";
 		
 		//Opcao 2
 		//URL path = AppArena.class.getResource("arquivoArena.csv");  		
