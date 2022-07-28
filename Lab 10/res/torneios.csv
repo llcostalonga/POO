@@ -1,0 +1,29 @@
+tipoPersonagem;nomePersonagem;nivelEnergia;descricaoArma;descicaoGolpe;poderOfensivoGolpe;descricaoArmadura;poderDefesaArmadura;estadoConservacaoArmadura
+Fera;Fera sem nome 6;84.94
+Gladiador;Gladiador sem nome 15;100.00;Escalibur;Ataque frontal;50.00
+Gladiador;Gladiador sem nome 15;100.00;Escalibur;Ataque Lateral;40.00
+Gladiador;Gladiador sem nome 15;100.00;Escalibur[herdada de Gladiador sem nome 19];Ataque frontal;50.00
+Gladiador;Gladiador sem nome 15;100.00;Escalibur[herdada de Gladiador sem nome 19];Ataque Lateral;40.00
+Gladiador;Gladiador sem nome 15;100.00;;;;Armadura de Corpo;0.50;0.50
+Gladiador;Gladiador sem nome 15;100.00;;;;Armadura de Corpo[herdada de Gladiador sem nome 19];0.50;0.50
+Gladiador;Gladiador sem nome 29;100.00;Escalibur;Ataque frontal;50.00
+Gladiador;Gladiador sem nome 29;100.00;Escalibur;Ataque Lateral;40.00
+Gladiador;Gladiador sem nome 29;100.00;Escalibur[herdada de Gladiador sem nome 30];Ataque frontal;50.00
+Gladiador;Gladiador sem nome 29;100.00;Escalibur[herdada de Gladiador sem nome 30];Ataque Lateral;40.00
+Gladiador;Gladiador sem nome 29;100.00;;;;Armadura de Corpo;0.50;0.50
+Gladiador;Gladiador sem nome 29;100.00;;;;Armadura de Corpo[herdada de Gladiador sem nome 30];0.50;0.50
+Fera;Fera sem nome 31;173.18
+Fera;Fera sem nome 50;138.61
+Fera;Fera sem nome 57;87.71
+Fera;Fera sem nome 70;165.80
+Fera;Fera sem nome 76;169.38
+Fera;Fera sem nome 88;166.19
+Gladiador;Gladiador sem nome 96;100.00;Escalibur;Ataque frontal;50.00
+Gladiador;Gladiador sem nome 96;100.00;Escalibur;Ataque Lateral;40.00
+Gladiador;Gladiador sem nome 96;100.00;Escalibur[herdada de Gladiador sem nome 95];Ataque frontal;50.00
+Gladiador;Gladiador sem nome 96;100.00;Escalibur[herdada de Gladiador sem nome 95];Ataque Lateral;40.00
+Gladiador;Gladiador sem nome 96;100.00;Escalibur[herdada de Gladiador sem nome 100];Ataque frontal;50.00
+Gladiador;Gladiador sem nome 96;100.00;Escalibur[herdada de Gladiador sem nome 100];Ataque Lateral;40.00
+Gladiador;Gladiador sem nome 96;100.00;;;;Armadura de Corpo;0.50;0.50
+Gladiador;Gladiador sem nome 96;100.00;;;;Armadura de Corpo[herdada de Gladiador sem nome 95];0.50;0.50
+Gladiador;Gladiador sem nome 96;100.00;;;;Armadura de Corpo[herdada de Gladiador sem nome 100];0.50;0.50
