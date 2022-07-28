@@ -225,10 +225,15 @@ public class AppArena {
 		String filePathString = file.getAbsolutePath();*/
          
 		Locale.setDefault(Locale.ENGLISH); //necessário para o Lab 09
+		String strFileName = "G:/My Drive/Classroom/POO Prog III DCEL [2022.1]/torneios regionais/llcostalonga.csv";		
 
 		try {
 			//AppArena arena =  new AppArena(filePath);
-			Path fileName = Path.of("./res/torneios.csv");
+			
+				
+			//Path fileName = Path.of("./res/torneios.csv");
+			Path fileName = Path.of(strFileName);
+			
 			Files.writeString(
 					fileName, 
 					"tipoPersonagem;nomePersonagem;nivelEnergia;descricaoArma;"
@@ -254,8 +259,8 @@ public class AppArena {
 		
 		
 		System.out.println("===== GRANDE FINAL ======");
-		String filePath = "./res/torneios.csv";
-		AppArena arenaFinal =  new AppArena(filePath);
+		//String filePath = "./res/torneios.csv";
+		AppArena arenaFinal =  new AppArena(strFileName);
 		arenaFinal.iniciarCombates();
 		
 	}
