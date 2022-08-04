@@ -1,3 +1,4 @@
+package br.ufes.llcostalonga.lab10;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Locale;
@@ -17,6 +18,10 @@ import java.nio.file.StandardOpenOption;
 public class AppArena {
 	Personagem[] personagens;
 
+	protected AppArena() {
+		personagens = new Personagem[0];
+	}
+	
 	public AppArena(int qtdPersonagens) {
 		personagens = new Personagem[qtdPersonagens];
 		for (int i = 0; i < personagens.length; i++) {
@@ -30,6 +35,10 @@ public class AppArena {
 	}
 
 	public AppArena(String csvFilePath) {
+		loadData(csvFilePath);
+	}
+	
+	protected void loadData(String csvFilePath) {
 		ArrayList<Personagem> personagens = new ArrayList(); 
 
 		String line = "";

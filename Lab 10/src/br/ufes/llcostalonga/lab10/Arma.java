@@ -1,3 +1,4 @@
+package br.ufes.llcostalonga.lab10;
 import java.util.ArrayList;
 
 public class Arma implements ArmaEfeitoMoral, ArmaFogo {

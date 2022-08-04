@@ -10,7 +10,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MeuMonitorArquivos {
-
+     final int TIME_OUT = 50000; //ms
+	
 	String diretorio;
 	List arquivosPrevios;
 	private PropertyChangeSupport fofoqueiro;
@@ -34,7 +35,7 @@ public class MeuMonitorArquivos {
 			return;
 		}
 		
-		while(timeOut < 30000) {
+		while(timeOut < TIME_OUT) {
 			FilenameFilter filter = (d, name) -> name.endsWith(".csv");
 			File files[] = dir.listFiles(filter);
 			

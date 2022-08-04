@@ -1,13 +1,16 @@
 package br.ufes.llcostalonga.lab10.filemonitor;
 
+import br.ufes.llcostalonga.lab10.*;
+
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-public class AppSharedArena implements  PropertyChangeListener {
+public class AppSharedArena extends AppArena implements  PropertyChangeListener {
 
 	
 	
 	public AppSharedArena(String dir) throws InterruptedException {
+		super();
 		MeuMonitorArquivos monitor = new MeuMonitorArquivos(dir);
 		monitor.addListener(this);
 		monitor.iniciarMonitoramento();
@@ -15,12 +18,18 @@ public class AppSharedArena implements  PropertyChangeListener {
 
 	@Override
 	public void propertyChange(PropertyChangeEvent evt) {
-		System.out.println("Novo arquivo encontrado:" + evt.getNewValue());		
+		System.out.println("Novo arquivo encontrado:" + evt.getNewValue());
+		String filePath = evt.getNewValue().toString();
+		this.loadData(filePath);
+		this.iniciarCombates();
 	}
 	
 	public static void main(String[] args) {
 		try {
-			AppSharedArena arena = new AppSharedArena("C:\\Users\\llcos\\downloads\\test\\");
+			String filePath = "C:\\Users\\llcos\\downloads\\test\\";
+			System.out.println("Monitorando o diretório " + filePath);
+			AppSharedArena arena = new AppSharedArena(filePath);
+			
 		
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block

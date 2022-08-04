@@ -1,3 +1,4 @@
+package br.ufes.llcostalonga.lab10;
 
 public class Lutador extends Personagem implements ArteMarcial{
 

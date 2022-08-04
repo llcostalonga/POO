@@ -1,3 +1,4 @@
+package br.ufes.llcostalonga.lab10;
 
 public class Judoca extends Lutador implements Judo {
 

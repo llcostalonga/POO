@@ -1,3 +1,4 @@
+package br.ufes.llcostalonga.lab10;
 
 public class UfcFighter extends Lutador implements Judo, Karate {
 
