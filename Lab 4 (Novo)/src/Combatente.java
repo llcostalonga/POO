@@ -12,13 +12,20 @@ public class Combatente {
 	}
 
 	public void atacar(Combatente adversario) {
-		adversario.defender((int)(Math.random() * 100));
-		
+		int poderOfensivo = (int)(Math.random() * 100);
+		adversario.defender(poderOfensivo);
 	}
 	
+	public String getIdentificacao() {
+		return identificacao;
+	}
+
+	public int getNivelEnergia() {
+		return nivelEnergia;
+	}
+
 	public void defender(int poderOfensivo) {
 		nivelEnergia-=poderOfensivo;
-		
 	}
 	
 	public boolean estaVivo() {
