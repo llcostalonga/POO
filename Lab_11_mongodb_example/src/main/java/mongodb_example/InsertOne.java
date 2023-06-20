@@ -25,7 +25,7 @@ public class InsertOne {
             try {
                 InsertOneResult result = collection.insertOne(new Document()
                         .append("_id", new ObjectId())
-                        .append("title", "Ski Bloopers (llcostalonga)")
+                        .append("title", "Ski Bloopers (llcostalonga 2022/2)")
                         .append("genres", Arrays.asList("Documentary", "Comedy")));
 
                 System.out.println("Success! Inserted document id: " + result.getInsertedId());
